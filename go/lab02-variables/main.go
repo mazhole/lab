@@ -1,5 +1,9 @@
 package main
 
+import (
+    "bytes"
+)
+
 //package variables
 var (
     p0 = "Hello"
@@ -89,4 +93,13 @@ func main() {
 
     println(p0, p1)
     //Hello World
+
+    var buffer bytes.Buffer
+
+    for i := 0; i < 100; i++ {
+        buffer.WriteString("a")
+    }
+
+    println("=> concatenated string:", buffer.String())
+    //=> concatenated string: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 }
