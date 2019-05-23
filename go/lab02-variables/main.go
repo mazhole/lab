@@ -96,10 +96,10 @@ func main() {
 
     var buffer bytes.Buffer
 
-    for i := 0; i < 100; i++ {
+    for i := 0; i < 40; i++ {
         buffer.WriteString("a")
     }
 
     println("=> concatenated string:", buffer.String())
-    //=> concatenated string: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    //=> concatenated string: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 }
