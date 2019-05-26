@@ -1,7 +1,6 @@
 package main
 
-//import "gitlab.com/mazhole/study/go/labs/techno-sphere/lab09-packages/world"
-import w "gitlab.com/mazhole/study/go/labs/techno-sphere/lab09-packages/world"
+import w "github.com/mazhole/study/go/lab09-packages/world"
 
 func main() {
     //world.PrintStartRoom()
