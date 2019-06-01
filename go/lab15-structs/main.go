@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "gitlab.com/mazhole/study/go/labs/techno-sphere/lab15-structs/golab15pack"
+    "github.com/mazhole/study/go/lab15-structs/golab15pack"
 )
 
 func main() {
