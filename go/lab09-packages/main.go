@@ -1,6 +1,6 @@
 package main
 
-import w "github.com/mazhole/study/go/lab09-packages/world"
+import w "github.com/mazhole/lab/go/lab09-packages/world"
 
 func main() {
     //world.PrintStartRoom()
