@@ -1,0 +1,39 @@
+#!/usr/bin/expect -f
+
+## To run
+#apt-get install expect
+
+set client_no [lindex $argv 0];
+set message_delay [lindex $argv 1];
+set message_qty [lindex $argv 2];
+
+puts "=> Client number: $client_no\r"
+puts "=> Message delay: $message_delay\r"
+puts "=> Message quantity to send: $message_qty\r"
+
+set timeout 1
+
+spawn telnet 127.1 5000
+expect eof
+
+puts "=> Test messages:\r"
+
+set i 0
+while {$i < $message_qty} {
+  send "Client$client_no - Test message $i\r"
+  expect eof
+  set i [expr {$i + 1}]
+  ## Only for demo
+  sleep $message_delay
+}
+
+#interact
+
+## To exit telnet manually
+expect "Escape character is '^]'."
+send "\x1d"
+expect "\r\ntelnet> "
+send "quit\r"
+expect "Connection closed.\r\n"
+
+expect eof
