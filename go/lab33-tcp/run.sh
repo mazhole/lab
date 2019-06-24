@@ -2,7 +2,7 @@
 
 go build -o tcp.exe main.go
 
-WORKDIR="$HOME/work/mazhole/gitlab.com/lab/go/lab33-tcp"
+WORKDIR="$PWD"
 
 gnome-terminal --working-directory="$WORKDIR" --command 'bash ./server.sh'
 
